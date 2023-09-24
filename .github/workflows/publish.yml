@@ -26,9 +26,7 @@ jobs:
           yarn
           yarn run build --if-present
           mkdir obsidian_jalali_calendar
-          cp main.js manifest.json obsidian_jalali_calendar
-          zip -r obsidian_jalali_calendar.zip obsidian_jalali_calendar
-          ls
+          cp main.js manifest.json style.css
           echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
       - name: Create Release
         id: create_release
@@ -41,16 +39,6 @@ jobs:
           release_name: ${{ github.ref }}
           draft: false
           prerelease: false
-      - name: Upload zip file
-        id: upload-zip
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./obsidian_jalali_calendar.zip
-          asset_name: obsidian_jalali_calendar-${{ steps.build.outputs.tag_name }}.zip
-          asset_content_type: application/zip
       - name: Upload main.js
         id: upload-main
         uses: actions/upload-release-asset@v1
@@ -71,3 +59,13 @@ jobs:
           asset_path: ./manifest.json
           asset_name: manifest.json
           asset_content_type: application/json
+      - name: Upload style.css
+        id: upload-css
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./style.css
+          asset_name: style.css
+          asset_content_type: text/css
