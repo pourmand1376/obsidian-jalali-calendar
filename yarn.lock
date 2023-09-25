@@ -3211,6 +3211,16 @@ obsidian-calendar-ui@0.3.12:
     svelte "3.35.0"
     tslib "2.1.0"
 
+
+obsidian-jalali-calendar-ui@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/obsidian-jalali-calendar-ui/-/obsidian-jalali-calendar-ui-0.0.4.tgz#443ac692a1436c21022227cc84a535ebcfc2f26e"
+  integrity sha512-f8TmjnG09htyXSQmvXsYJFP7wX4VzBwdoVYDY8zA5Aufj2wFqjsUfcsXTqZ6DRFPvpNeM94u3j7FPk7TT1h0ew==
+  dependencies:
+    obsidian-daily-notes-interface "0.8.4"
+    svelte "3.35.0"
+    tslib "2.1.0"
+
 obsidian-daily-notes-interface@0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/obsidian-daily-notes-interface/-/obsidian-daily-notes-interface-0.8.4.tgz#530cec611878c2d2ae94ba868490df5bf17c8ccf"

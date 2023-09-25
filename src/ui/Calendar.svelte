@@ -6,7 +6,7 @@
     Calendar as CalendarBase,
     ICalendarSource,
     configureGlobalMomentLocale,
-  } from "obsidian-calendar-ui";
+  } from "obsidian-jalali-calendar-ui";
   import { onDestroy } from "svelte";
 
   import type { ISettings } from "src/settings";
