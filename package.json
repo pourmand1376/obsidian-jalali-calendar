@@ -1,8 +1,8 @@
 {
-  "name": "calendar",
-  "version": "1.5.10",
-  "description": "Calendar view of your daily notes",
-  "author": "liamcain",
+  "name": "jalali-calendar",
+  "version": "0.0.6",
+  "description": "Jalali Calendar view of your daily notes",
+  "author": "Amir Pourmand",
   "main": "main.js",
   "license": "MIT",
   "scripts": {
